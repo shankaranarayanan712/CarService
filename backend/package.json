@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "node --inspect server.js",
+    "start": "node --trace-warnings --inspect server.js",
     "lint": "eslint ./",
     "lint_fix": "eslint --fix"
   },

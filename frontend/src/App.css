@@ -1,0 +1,308 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+    background: #000;
+    background: radial-gradient(#222, #000);
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+    opacity: 0.8;
+}
+
+.loader-inner {
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+
+.loader-line-wrap {
+    animation: 
+		spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
+	;
+    box-sizing: border-box;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform-origin: 50% 100%;
+    width: 100px;
+}
+.loader-line {
+    border: 4px solid transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+.loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
+.loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
+.loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
+.loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
+.loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
+
+.loader-line-wrap:nth-child(1) .loader-line {
+    border-color: hsl(0, 80%, 60%);
+    height: 90px;
+    width: 90px;
+    top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line {
+    border-color: hsl(60, 80%, 60%);
+    height: 76px;
+    width: 76px;
+    top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line {
+    border-color: hsl(120, 80%, 60%);
+    height: 62px;
+    width: 62px;
+    top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line {
+    border-color: hsl(180, 80%, 60%);
+    height: 48px;
+    width: 48px;
+    top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line {
+    border-color: hsl(240, 80%, 60%);
+    height: 34px;
+    width: 34px;
+    top: 35px;
+}
+
+@keyframes spin {
+    0%, 15% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+img {
+  border-radius: 50%;
+}
+
+/* The gradient part */
+body {
+  background:
+    radial-gradient(300px circle at 73% 60%, rgba(69,28,84,.8),rgba(69,28,84,0)),
+    radial-gradient(280px circle at 52% 70%, rgba(220,123,67,.95),rgba(220,123,67,0)),
+    radial-gradient(421px circle at 82% 82%, rgba(197,197,145,.95),rgba(197,197,145,0)),
+    radial-gradient(450px circle at 42% 65%, rgba(192,40,89,1),rgba(192,40,89,0)),
+    radial-gradient(480px circle at 40% 75%, rgba(192,40,89,1),rgba(192,40,89,0)),
+    radial-gradient(480px circle at 38% 95%, rgba(192,40,89,1),rgba(192,40,89,0)),
+    radial-gradient(435px circle at 65% 73%, rgba(235,188,143, 1), rgba(235,188,143, 0)),
+    radial-gradient(850px circle at right top, rgba(147,17,87, 1), rgba(147,17,87, .9), rgba(209,64,97,.4), rgba(209,64,97,0)),
+    radial-gradient(422px circle at right 75%, rgba(35,173,149, .95), rgba(35,173,149, 0)),
+    radial-gradient(350px circle at right 50%, rgba(204,116,96,1), rgba(204,116,96,0)),
+    radial-gradient(300px circle at right bottom, rgba(169,82,160, 1),  rgba(169,82,160, 0)),
+    linear-gradient(to right bottom, rgba(71,17,77, 0), rgba(71,17,77, 0.95) 40%, rgba(71,17,77, 0.5) 60%, rgba(71,17,77, 0)),
+    linear-gradient(to right, #1c062d, #b8205d);
+}
+
+/* Some styles */
+* {
+box-sizing: border-box;
+}
+/* body {
+min-height: 100vh;
+font-family: "Segoe UI", "Segoe WP", "Open Sans", Helvetica, Arial;
+font-size: 16px;
+line-height: 1.6;
+background: transparent;
+} */
+.main {
+width: 1110px;
+max-width: 100%;
+margin: 0 auto;
+padding: 10px;
+}
+.block {
+flex: 1 1 auto;
+padding: 11px 25px 20px;
+margin: 10px;
+background: #FFF;
+border-radius: 4px;
+box-shadow: 0 2px 4px rgba(0,0,0,.15);
+color: #989987;
+border-top: 4px solid #FFF;
+overflow: hidden;
+}
+.block + .block {
+margin-top: 18px;
+}
+.block.with-image {
+padding-top: 0;
+padding-left: 0;
+padding-right: 0;
+border-top: 0;
+}
+.with-image img:first-child {
+display: block;
+border-radius: 4px 4px 0 0;
+width: 100%;
+height: auto;
+}
+.with-image h2,
+.with-image p {
+padding: 0 25px;
+}
+.top-1 {
+border-top-color: #84656D;
+}
+.top-2 {
+border-top-color: #CF534E;
+}
+.flex {
+display: flex;
+}
+.flex-v {
+display: flex;
+flex-direction: column;
+}
+.flex .block {
+min-width: 0;
+min-height: 0;
+}
+.w2-3 {
+flex-basis: 66.666%;
+width: 66.666%;
+}
+.w1-3 {
+flex-basis: 33.333%;
+width: 33.333%;
+flex-grow: 0;
+}
+h1 {
+margin: .8em 0 1.65em 0;
+color: #FFF;
+text-align: center;
+}
+h2 {
+margin-top: .3em;
+margin-bottom: .2em;
+}
+label {
+display: block;
+margin-bottom: 0.3em;
+}
+input[type="search"] {
+padding: 5px 10px;
+border: 2px solid #E2E4E6;
+border-right: 0;
+border-radius: 3px 0 0 3px;
+font-size: 1em;
+}
+input[type="submit"] {
+border: 0;
+background: #989987;
+color: #FFF;
+border-radius: 0 3px 3px 0;
+font-weight: bold;
+font-size: 0.875em;
+text-transform: uppercase;
+}
+nav ul {
+list-style: none;
+display: flex;
+padding: 0;
+margin: 0;
+}
+li {
+flex: 1 1 auto;
+text-align: center;
+}
+nav a {
+display: block;
+padding: 20px 5px;
+text-decoration: none;
+color: inherit;
+border-radius: 5px;
+}
+nav a:hover, nav a:focus {
+background: #989987;
+color: #FFF;
+}
+a, input {
+transition: all .275s;
+}
+img {
+max-width: 100%;
+height: auto;
+}
+.btn {
+display: inline-block;
+margin-top: .5em;
+padding: 8px 20px;
+color: #FFF;
+background: linear-gradient(to right, #551346,#862052);
+text-decoration: none;
+font-size: 0.75em;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+border-radius: 3px;
+}
+.origin {
+margin: 1.5em 1em 4em;
+text-align: center;
+color: #FFF;
+font-weight: bold;
+}
+.origin a {
+color: #FFF;
+}
