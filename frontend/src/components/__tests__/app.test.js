@@ -1,7 +1,9 @@
 import React from 'react';
 import {render,screen, cleanup,fireEvent} from '@testing-library/react'
 import { LandingPage } from "../LandingPage";
-import {ModalComponent} from "../ModalComponent";
+
+// Note: I have set up the unit testing and provided only sample test cases 
+// This can be extended to write detailed testcases
 
 //cleanup the code after each
 afterEach(()=>{
