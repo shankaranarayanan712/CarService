@@ -1,5 +1,5 @@
 # Project Title
-Car Service
+Car Models
 ---
 ## Requirements
 
@@ -16,9 +16,14 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
     $ npm install npm -g
 ---
-
+## Note :
+   Make sure you are in main branch.
+   If you are not in main branch use 
+   $ git checkout main 
+   to checkout to main branch.
 ## Install
     $ cd YOUR_PATH/backend
+    $ cd YOUR_PATH/frontend
     $ npm install
 ## Running the project
 
@@ -27,6 +32,30 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 ## Testing the project
 
     $ npm test
+
+## FrontEnd Overview
+
+1. The application will be started with Landing screen
+
+2. The Landing screen Loads for a second until it gets the car  details
+
+3. Then it is presented with Data in Table format which contains Actions, Name
+
+4. Clicking on Action(with icon'A') will get the information about the block
+
+5. It makes an APi call to fetch the data and opens a Modal which shows the details of the car
+
+6. The Table provides functionalities like, sorting on columns, and searching6
+
+7. Table Pagination is handled based on user input
+
+8. The Table has an actionable column(1st column) . 
+    This actionable column fetches the block details  based on selected row
+
+9. Clicking on the arrow expands the accordion which inturn shows the details at the block level
+
+10. Unit Testing is done using jest
+
 
 ## Service Overview
 
@@ -50,6 +79,8 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 8. Code is linted using eslint to enforce consistency and styling. The linting is adopted as per Airbnb standards
 
 9. Unit testing is created using Jest and supertest
+
+
 
 
 

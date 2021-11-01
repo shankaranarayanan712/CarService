@@ -36,7 +36,7 @@ Crypto Wallet app using React Hooks and Context API
 
 9. Clicking on the arrow expands the accordion which inturn shows the details at the block level
 
-
+10. Unit Testing is done using jest
 
 
 
