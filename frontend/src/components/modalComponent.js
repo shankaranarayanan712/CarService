@@ -3,8 +3,9 @@
 import React from 'react';
 import { Button, Modal, ModalBody, ModalFooter,ModalHeader } from 'reactstrap';
 
-export const ModalComponent = ({modal,toggle,carModel}) =>{
-
+export const ModalComponent = ({ modal, toggle, carModel }) => {
+  // let carSpec = carModel.body.split(' ');
+  // console.log("spec", carSpec);
 return (
 <div style={{ maxWidth: "100%" }}>
     <Modal isOpen={modal} toggle={toggle} size='xl'>
@@ -17,7 +18,12 @@ return (
       </ModalBody>
       <ModalBody>
         <div>
-           Production Year: {carModel.production}
+        <p><strong> Production Year</strong> : {carModel.production}</p>
+        </div>
+      </ModalBody>
+      <ModalBody>
+        <div>
+        <p><strong> Specifications</strong> : {carModel.body }</p>
         </div>
       </ModalBody>
       <ModalFooter>

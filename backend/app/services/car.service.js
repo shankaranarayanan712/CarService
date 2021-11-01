@@ -14,23 +14,18 @@ const getCarDetails = async ($) => {
         if (modelDetails) {
           const manufacturer = modelDetails.html('.hproduct .infobox-above');
           const image = modelDetails.html('.image');
-          const body = modelDetails.html('.mw-redirect');
           const production = modelDetails.html('.infobox-data');
           // eslint-disable-next-line func-names
           modelDetails(manufacturer).each(function () {
             modelDet.name = modelDetails(this).text() ? modelDetails(this).text() : '';
           });
-          // modelDetails(production).each((index, element) => {
-          //   const str = element.innerHTML;
-          //   const age = element.nextSibling.nextSibling.innerHTML;
-          // });
           modelDet.link = modelDetails(image).children().first()[0].attribs.src;
-          modelDet.body = modelDetails(body).text();
+          modelDet.body = modelDetails(production).text();
           if (production) {
             const regex1 = /19/;
             const regex2 = /18/;
             const regex3 = /17/;
-            // The production is  jumbed across the html, hence do a regex search to find out
+            // The production year is jumbed across the html, hence do a regex search to find out
             let search = production.match(regex1);
             if (!search) {
               search = production.match(regex2);
